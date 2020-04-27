@@ -142,6 +142,9 @@ h1 {
 h2 {
   font-size: 3.2rem;
 }
+h3 {
+  font-size: 2.8rem;
+}
 h4 {
   font-size: 2.5rem;
 }
@@ -220,6 +223,9 @@ header nav a {
   background: #3f7569;
   border-radius: 10px;
 }
+.topContent h3 {
+  padding-top: 4%;
+}
 .bottomContent {
   width: 90%;
   margin: 0 5% 3% 5%;
@@ -243,4 +249,26 @@ header nav a {
 }
 .bottomContent img {
   border-radius: 5px;
+}
+.bottomContent h3 {
+  padding: 3% 0;
+  text-align: center;
+}
+footer {
+  background: #3f7569;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+footer .iconBox {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5%;
+}
+footer .iconBox a .icon {
+  height: 50px;
 }
