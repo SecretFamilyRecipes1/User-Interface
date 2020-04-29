@@ -12,9 +12,20 @@
         padding: 0;
         position: relative;
 
+        @media @phone {
+            position: static;
+            .flexCenter();
+            flex-direction:column;
+        }
+
+
         img {
             width: 100%;
             margin: 0;
+
+            @media @phone {
+                border-radius: 10px 10px 0 0;
+            }
         }
 
         .bannerText {
@@ -25,6 +36,25 @@
             background: white;
             opacity: 80%;
             padding: 3% 0;
+
+            @media @tablet {
+                top: 15%;
+            }
+            
+            @media @phone {
+                position: static;
+                opacity: 100%;
+                background: @headercolor;
+                color: white;
+
+                h2 {
+                    font-size: 2.5rem;
+                }
+
+                h4 {
+                    font-size: 1.8rem;
+                }
+            }
         }
 
         a {
@@ -39,13 +69,32 @@
             color: white;
             background: @headercolor;
             border-radius: 10px;
+
+            @media @tablet {
+                width: 15%;
+            }
+
+            @media @phone {
+                position: static;
+                margin: 0;
+                width: 100%;
+                border-radius: 0 0 10px 10px;
+                border: 3px solid @headercolor;
+                background: white;
+                color: @headercolor;
+                font-weight: bold;
+            }
         }
     } // end of banner image styling
 
     h3 {
         padding-top: 4%;
+        
+        @media @phone {
+            margin-top: 5%;
+        }
     }
-}
+} // end of topContent
 
 .bottomContent {
     width: 90%;
@@ -56,11 +105,25 @@
         .flex();
         justify-content: space-around;
 
+        @media @tablet {
+            flex-direction: column;
+            margin: 5% 0;
+        }
+
         .info {
             .infoMixin();
             .flex();
             flex-direction: column;
             align-items: center;
+
+            @media @tablet {
+                width: 90%;
+            }
+
+            @media @phone {
+                margin-bottom: 10%;
+                padding: 5%;
+            }
 
             p {
                 width: 85%;
@@ -71,6 +134,11 @@
 
     img {
         border-radius: 5px;
+
+
+        @media @phone {
+            margin: 4% 0;
+        }
     }
 
     h3 {
