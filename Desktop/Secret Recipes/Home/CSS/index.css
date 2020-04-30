@@ -185,18 +185,21 @@ header {
     padding: 0;
   }
 }
-header img {
+header a {
+  height: 100%;
+}
+header a img {
   height: 100%;
   width: auto;
 }
 @media (max-width: 550px) {
-  header img {
+  header a img {
     height: 80%;
     width: auto;
   }
 }
 @media (max-width: 500px) {
-  header img {
+  header a img {
     width: 50%;
     height: auto;
   }
