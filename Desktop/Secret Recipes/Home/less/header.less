@@ -8,18 +8,29 @@ header {
     align-items: center;
     width: 100%;
     margin: 0;
+    padding: 0 5%;
+
+    @media @tablet {
+        padding: 0 2%;
+    }
+
 
     @media @phone {
         .flexCenter();
         flex-direction: column;
         height: auto;
-        width: 100%;
         margin: 0;
+        padding: 0;
     }
 
     img {
         height: 100%;
         width: auto;
+
+        @media (max-width: 550px){
+            height: 80%;
+            width: auto;
+        }
 
         @media @phone {
         width: 50%;
@@ -32,21 +43,51 @@ header {
         align-items: flex-end;
         justify-content: flex-end;
         width: 50%;
+       
+        @media @tablet {
+            width: 90%;
+            justify-content: space-around;
+        }
+        
+        @media (max-width: 550px){
+            justify-content: space-between;
+        }
+
+        @media @phone {
+            width: 100%;
+            .flexCenter();
+            flex-direction: column;
+        }
+
         a {
             font-size: 2.5rem;
             text-align: center;
             text-decoration: none;
             color: white;
-            width: 45%;
+            width: 15%;
+            margin-left: 15%;
+
+            &:hover {
+                color: darken(white, 25%)
+
+                
+            }
+
+            @media @tablet {
+                width: 40%;
+                margin: 0;
+            }
 
             @media @phone {
-                padding-bottom: 4%;
+                padding: 2% 0;
+                width: 100%;
+                border-top: 3px solid @borderColor;
+
+                &:hover {
+                    background: lighten(@headercolor, 10%);
+                }
             }
         }
 
-        @media @phone {
-            .flexCenter();
-            flex-direction: column;
-        }
     }
 }

@@ -37,6 +37,7 @@
             opacity: 80%;
             padding: 3% 0;
 
+
             @media @tablet {
                 top: 15%;
             }
@@ -67,8 +68,12 @@
             font-size: 2rem;
             text-decoration: none;
             color: white;
-            background: @headercolor;
+            background: lighten(@headercolor, 18%);
             border-radius: 10px;
+            
+            &:hover {
+                background: @headercolor;
+            }
 
             @media @tablet {
                 width: 15%;
@@ -83,6 +88,10 @@
                 background: white;
                 color: @headercolor;
                 font-weight: bold;
+                
+                &:hover{
+                    background: white;
+                }
             }
         }
     } // end of banner image styling
